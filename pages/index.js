@@ -4,7 +4,7 @@ import Counter from '../components/Counter';
 
 const viewIndex = () =>(
   <Layout header="Next" title="Top page.">
-    <Counter/>
+    <Counter />
     <hr/>
     <Link href="./other"><button>
       go to Other &gt;&gt;

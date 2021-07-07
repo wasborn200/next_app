@@ -64,7 +64,7 @@ class Calc extends Component {
         <p>TOTAL: {this.props.result}</p>
         <input type="text" style={this.style} size="40"
           value={this.state.input}
-          onChange={this.onChange} onKeyPress={this.doAction} />
+          onChange={this.onChange} onKeyPress={this.onKeyPress} />
         <button style={this.style} onClick={this.doAction}>
           Enter
         </button>

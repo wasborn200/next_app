@@ -2,8 +2,9 @@ import Link from 'next/link';
 import Layout from '../components/Layout';
 import Calc from '../components/Calc';
 
-const viewCalc = () =>{
+const viewCalc = () => (
   <Layout header="Calc" title="calculator">
+    <Calc />
     <hr />
     <div>
       <Link href="/">
@@ -11,6 +12,6 @@ const viewCalc = () =>{
       </Link>
     </div>
   </Layout>
-};
+);
 
 export default viewCalc
