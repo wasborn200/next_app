@@ -2,7 +2,7 @@ import Link from 'next/link';
 import Layout from '../components/Layout';
 import Counter from '../components/Counter';
 
-export default () =>(
+const viewIndex = () =>(
   <Layout header="Next" title="Top page.">
     <Counter/>
     <hr/>
@@ -11,3 +11,5 @@ export default () =>(
     </button></Link>
   </Layout>
 );
+
+export default viewIndex
