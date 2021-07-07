@@ -1,16 +1,10 @@
+import css from 'styled-jsx/css';
+
 export default <style>{`
   body {
     margin:10px;
     padding:5px;
     color:#669;
-  }
-  h1 {
-    font-size:64pt;
-    font-weight:bold;
-    text-align:right;
-    letter-spacing:-8px;
-    color:#ddddff;
-    margin:-32px 5px;
   }
   header {
     font-size:64pt;
@@ -41,7 +35,29 @@ export default <style>{`
   }
   p {
     margin:0px;
-    color:#666;
+    color:#669;
     font-size:16pt;
+  }
+  hr {
+    margin:25px 0px;
+  }
+  tr {
+    margin:0px;
+  }
+  th{
+    font-size:24pt;
+    font-weight:plain;
+    text-align:left;
+    padding:0px 20px;
+    margin:0px;
+    border-bottom:1px solid gray;
+  }
+  td{
+    font-size:24pt;
+    font-weight:plain;
+    text-align:right;
+    padding:0px 20px;
+    margin:0px;
+    border-bottom:1px solid gray;
   }
 `}</style>;
