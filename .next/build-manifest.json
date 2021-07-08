@@ -24,10 +24,15 @@
       "static/chunks/main.js",
       "static/chunks/pages/_error.js"
     ],
-    "/calc": [
+    "/fire": [
       "static/chunks/webpack.js",
       "static/chunks/main.js",
-      "static/chunks/pages/calc.js"
+      "static/chunks/pages/fire.js"
+    ],
+    "/fire_add": [
+      "static/chunks/webpack.js",
+      "static/chunks/main.js",
+      "static/chunks/pages/fire_add.js"
     ]
   },
   "ampFirstPages": []

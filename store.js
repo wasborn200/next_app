@@ -1,47 +1,40 @@
 import { createStore, applyMiddleware } from 'redux';
 import thunkMiddleware from 'redux-thunk';
+import firebase from "firebase";
 
+var config = {
+  apiKey: "AIzaSyCtb9npVkJ6W94GZXd5PY51jM6EraZME0o",
+  authDomain: "wasborn-reactapp1.firebaseapp.com",
+  databaseURL: "https://wasborn-reactapp1-default-rtdb.firebaseio.com",
+  projectId: "wasborn-reactapp1",
+  storageBucket: "wasborn-reactapp1.appspot.com",
+  messagingSenderId: "792384329558",
+  appId: "1:792384329558:web:ad6286c9b4352b4f40a8f7"
+};
+
+var fireapp;
+try {
+  firebase.initializeApp(config);
+} catch (error) {
+  console.log(error.message);
+}
+export default fireapp;
 
 // ステート初期値
 const initial = {
-  message:'START',
-  data:[],
-  number:[],
-  result:0
 }
 
 
 // レデューサー
-function calcReducer (state = initial, action) {
+function fireReducer (state = initial, action) {
   switch (action.type) {
-    case 'ENTER':
-      let data2 = state.data.slice();
-      let s = action.value;
-      data2.unshift(s);
-      let num = s.replace(/[^0-9]/g,"");
-      let number2 = state.number.slice();
-      number2.unshift(num);
-      let result = (state.result * 1) + (num * 1);
-      return {
-        message:'ENTER',
-        data:data2,
-        number:number2,
-        result:result
-      };
-    case 'RESET':
-      return {
-        message:'RESET',
-        data:[],
-        number:[],
-        result:0
-      };
+    case 'TESTACTION':
     default:
       return state;
   }
 }
 
-// initStore関数（redux-store.jsで必要）
 export function initStore(state = initial) {
-  return createStore(calcReducer, state,
+  return createStore(fireReducer, state,
     applyMiddleware(thunkMiddleware))
 }
